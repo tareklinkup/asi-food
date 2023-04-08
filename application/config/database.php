@@ -8,9 +8,9 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	
-  	'username' => 'asifood4_admin1',
-  	'password' => '=~z{_.!%)jQm',
-  	'database' => 'asifood4_productionsoft',
+  	'username' => 'root',
+  	'password' => '',
+  	'database' => 'asifood',
 	
 	// 'username' => 'expressre2ailbd_admin11',
 	// 'password' => 'e+Zg~uM$3I)~',

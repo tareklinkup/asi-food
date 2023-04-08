@@ -25,6 +25,7 @@ const salesInvoice = Vue.component('sales-invoice', {
                     <div class="col-xs-5 text-right">
                         <strong>Sales by:</strong> {{ sales.AddBy }}<br>
                         <strong>Invoice No.:</strong> {{ sales.SaleMaster_InvoiceNo }}<br>
+                        <strong>Payment Type:</strong> {{ sales.payment_type }}<br>
                         <strong>Sales Date:</strong> {{ sales.SaleMaster_SaleDate | formatDateTime('DD-MM-YYYY') }} {{ sales.AddTime | formatDateTime('h:mm a') }}
                     </div>
                 </div>
