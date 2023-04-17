@@ -25,8 +25,9 @@ const salesInvoice = Vue.component('sales-invoice', {
                     <div class="col-xs-5 text-right">
                         <strong>Sales by:</strong> {{ sales.AddBy }}<br>
                         <strong>Invoice No.:</strong> {{ sales.SaleMaster_InvoiceNo }}<br>
+                        <strong>Sales Date:</strong> {{ sales.SaleMaster_SaleDate | formatDateTime('DD-MM-YYYY') }} {{ sales.AddTime | formatDateTime('h:mm a') }}<br>
                         <strong>Payment Type:</strong> {{ sales.payment_type }}<br>
-                        <strong>Sales Date:</strong> {{ sales.SaleMaster_SaleDate | formatDateTime('DD-MM-YYYY') }} {{ sales.AddTime | formatDateTime('h:mm a') }}
+                        <strong v-if="sales.payment_type != 'cash'">Bank Name:</strong> {{ sales.bank_name }}
                     </div>
                 </div>
                 <div class="row">

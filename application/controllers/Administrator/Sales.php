@@ -350,6 +350,7 @@ class Sales extends CI_Controller {
             c.Customer_Type,
             e.Employee_Name,
             br.Brunch_name,
+            ba.bank_name,
             (
                 SELECT 
                     SUM((SaleDetails_Rate * SaleDetails_TotalQuantity) * IF(commission_percent > 0, (commission_percent / 100), 0)) AS commission_amount
@@ -359,6 +360,7 @@ class Sales extends CI_Controller {
             left join tbl_customer c on c.Customer_SlNo = sm.SalseCustomer_IDNo
             left join tbl_employee e on e.Employee_SlNo = sm.employee_id
             left join tbl_brunch br on br.brunch_id = sm.SaleMaster_branchid
+            left join tbl_bank_accounts ba on ba.account_id = sm.account_id
             where sm.SaleMaster_branchid = '$branchId'
             and sm.Status = 'a'
             $clauses
